@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  learningApiDb:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: furniture
+    ports:
+      - '3306:3306'
+    volumes:
+      - learningApi:/var/lib/mysql
+
+volumes:
+  learningApi:
